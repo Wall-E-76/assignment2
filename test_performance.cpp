@@ -5,6 +5,23 @@
 #include <chrono>
 #define PERCENT 5
 
+double norm_one(double array[], int size) {
+    double norm = 0.0;
+    for (int i = 0; i <size; i++) {
+        norm += fabs(array[i]);
+    }
+    return norm / size;
+}
+
+double norm_infinite(double array[], int size) {
+    double norm = array[0];
+    for (int i = 0; i < size; i++) {
+        if (norm < fabs(array[i]))
+            norm = fabs(array[i]);
+    }
+    return norm;
+}
+
 std::vector <int> random_array(int size){
     std::vector <int> ans;
     for (int i=0; i<size; i++){
@@ -52,8 +69,8 @@ void time_one_step(int i, int j, double (&norms)[104][6],  std::vector <int>(*fu
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
         time[rep] = std::chrono::duration_cast<std::chrono::nanoseconds> (end - begin).count();
     }
-    norms[i][j] = norme_one(time);
-    norms[i][j+1] = norme_inifinite(time);
+    norms[i][j] = norm_one(time, reps);
+    norms[i][j+1] = norm_infinite(time, reps);
 }
 
 void performanceTest (){
