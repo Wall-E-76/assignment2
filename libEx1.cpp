@@ -44,8 +44,8 @@ void bubbleSort(std::vector <int>& toSort, std::vector <int>& order) {
 		throw "order vector is not an empty vector";
 	}
 
-	if (toSort.size() < 2) {
-		throw "input array is too small, needs to be at least 2 items long";
+	if (toSort.size() < 1) {
+		throw "input array is too small, needs to be at least 1 items long";
 	}
 
 	for (int i = 0; i < size; i++) {
@@ -75,19 +75,19 @@ void bubbleSort(std::vector <int>& toSort) {
 	int size = toSort.size();
 	int temp;
 
-	if (toSort.size() < 2) {
-		throw "input array is too small, needs to be at least 2 items long";
+	if (toSort.size() < 1) {
+		throw "input array is too small, needs to be at least 1 items long";
 	}
 	do {
-		ch = 0;
+		ch = false;
 		for (int i = 1; i < size - 1; i++) {
 			if (toSort[i - 1] > toSort[i]) {
 				temp = toSort[i - 1];
 				toSort[i - 1] = toSort[i];
 				toSort[i] = temp;
-				ch = 1;
+				ch = true;
 			}
 		}
 		size--;
-	} while (ch == 1);
+	} while (ch);
 }

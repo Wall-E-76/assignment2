@@ -1,4 +1,5 @@
 #include "libEx1.h"
+#include "test_performance.h"
 
 
 int main() {
@@ -7,7 +8,7 @@ int main() {
 	std::vector <int> tester;
 	std::vector <int> order;
 
-	std::cout << "random array: " << std::endl;
+	/*std::cout << "random array: " << std::endl;
 
 		for (int i = 0; i < 20; i++) {
 
@@ -20,7 +21,11 @@ int main() {
 
 		for (int i = 0; i < 20; i++) {
 			std::cout << tester[i] <<", "<<order[i]<< std::endl;
-		}
+		}*/
+
+
+	performanceTest();
+
 		return 0;
 
 }

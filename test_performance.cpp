@@ -1,8 +1,4 @@
-#include <vector>
-#include <cmath>
-#include "stdlib.h"
-#include "libEx1.h"
-#include <chrono>
+#include "test_performance.h"
 #define PERCENT 5
 
 double norm_one(double array[], int size) {
@@ -42,7 +38,7 @@ std::vector <int> random_light_array(int size){
         int b;
         do {
             b= rand()%size;
-        } while (a==b);
+        } while (a==b && size>1);
         int temp;
         temp = ans[a];
         ans[a] = ans[b];
@@ -59,11 +55,11 @@ std::vector <int> inverted_array(int size){
     return ans;
 }
 
-void time_one_step(int i, int j, double (&norms)[104][6],  std::vector <int>(*func)(int)){
-    int reps = 10;
-    double time [reps];
+void time_one_step(int size, int i, int j, double (&norms)[104][6],  std::vector <int>(*func)(int)){
+    const int reps = 10;
+    double time[reps];
     for (int rep=0; rep<reps; rep++){
-        std::vector<int> result= func(i);
+        std::vector<int> result= func(size);
         std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
         bubbleSort(result);
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
@@ -79,10 +75,40 @@ void performanceTest (){
     double norms[104][6];
 
     for (int i=1;i<100; i++){
-        for (int j=0; j<6; j+2){
-            time_one_step(i,j,norms, random_light_array);
-        }
+        int j=0;
+        time_one_step(i,i,j,norms, random_light_array);
+		j += 2;
+		time_one_step(i,i, j, norms, random_array);
+		j += 2;
+		time_one_step(i, i, j, norms, inverted_array); 
     }
+
+	for (int i = 3; i <= 3; i++) {
+		int j = 0;
+		time_one_step(pow(10,i),(97+i), j, norms, random_light_array);
+		j += 2;
+		time_one_step(pow(10, i), (97 + i), j, norms, random_array);
+		j += 2;
+		time_one_step(pow(10, i), (97 + i), j, norms, inverted_array);
+		j = 0;
+		time_one_step(pow(10, i)*2, (97 + i+1), j, norms, random_light_array);
+		j += 2;
+		time_one_step(pow(10, i)*2, (97 + i+1), j, norms, random_array);
+		j += 2;
+		time_one_step(pow(10, i)*2, (97 + i+1), j, norms, inverted_array);
+	}
+
+	std::cout <<" Almost -- Random -- Opposite" << std::endl;
+	std::cout << " INF, 1 -- INF, 1 -- INF, 1  " << std::endl;
+
+
+	for (int i = 0; i < 102; i++) {
+		std::cout << i << ": ";
+		for (int j = 0; j < 6; j++) {
+			std::cout << norms[i][j] << ", ";
+		}
+		std::cout << std::endl;
+	}
 
 }
 
