@@ -1,5 +1,7 @@
+#include <iomanip>
 #include "test_performance.h"
 #define PERCENT 5
+
 
 double norm_one(double array[], int size) {
     double norm = 0.0;
@@ -97,18 +99,17 @@ void performanceTest (void (*sortMethod)(std::vector <int>&)){
 		time_one_step(pow(10, i)*2, (97 + i+1), j, norms, inverted_array, sortMethod);
 	}
 
-	std::cout <<" Almost -- Random -- Opposite" << std::endl;
-	std::cout << " INF, 1 -- INF, 1 -- INF, 1  " << std::endl;
+	std::cout <<" " << std::setw(20) <<"Almost"<< std::setw(20) << "Random"<< std::setw(20) << "Opposite" << std::endl;
+	std::cout <<" " << std::setw(12) << "INF" << std::setw(10) << "1"<< std::setw(10) << "INF" << std::setw(10) <<"1" << std::setw(10) << "INF" << std::setw(10) << "1" << std::endl;
 
 
 	for (int i = 0; i < 104; i++) {
-		std::cout << i+1 << ": ";
+		std::cout <<std::setw(4)<< i+1 << ": ";
 		for (int j = 0; j < 6; j++) {
-			std::cout << norms[i][j] << ", ";
+			std::cout << std::setw(8) << norms[i][j] << ", ";
 		}
 		std::cout << std::endl;
 	}
-
 }
 
 
