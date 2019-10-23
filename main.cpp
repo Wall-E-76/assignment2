@@ -24,7 +24,8 @@ int main() {
 		}*/
 
 
-	performanceTest();
+	performanceTest(bubbleSort);
+	performanceTest(mergeSort);
 
 		return 0;
 

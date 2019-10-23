@@ -55,55 +55,54 @@ std::vector <int> inverted_array(int size){
     return ans;
 }
 
-void time_one_step(int size, int i, int j, double (&norms)[104][6],  std::vector <int>(*func)(int)){
+void time_one_step(int size, int i, int j, double (&norms)[104][6],  std::vector <int>(*func)(int), void (*sortMethod)(std::vector <int>&)){
     const int reps = 10;
     double time[reps];
     for (int rep=0; rep<reps; rep++){
         std::vector<int> result= func(size);
         std::chrono::steady_clock::time_point begin = std::chrono::steady_clock::now();
-        bubbleSort(result);
+        sortMethod(result);
         std::chrono::steady_clock::time_point end = std::chrono::steady_clock::now();
         time[rep] = std::chrono::duration_cast<std::chrono::nanoseconds> (end - begin).count();
     }
-    norms[i][j] = norm_one(time, reps);
-    norms[i][j+1] = norm_infinite(time, reps);
+    norms[i][j] = norm_infinite(time, reps);
+    norms[i][j+1] = norm_one(time, reps);
 }
 
-void performanceTest (){
-
+void performanceTest (void (*sortMethod)(std::vector <int>&)){
 
     double norms[104][6];
 
-    for (int i=1;i<100; i++){
+    for (int i=0;i<100; i++){
         int j=0;
-        time_one_step(i,i,j,norms, random_light_array);
+        time_one_step(i+1,i,j,norms, random_light_array, sortMethod);
 		j += 2;
-		time_one_step(i,i, j, norms, random_array);
+		time_one_step(i+1,i, j, norms, random_array, sortMethod);
 		j += 2;
-		time_one_step(i, i, j, norms, inverted_array); 
+		time_one_step(i+1, i, j, norms, inverted_array, sortMethod);
     }
 
 	for (int i = 3; i <= 3; i++) {
 		int j = 0;
-		time_one_step(pow(10,i),(97+i), j, norms, random_light_array);
+		time_one_step(pow(10,i),(97+i), j, norms, random_light_array, sortMethod);
 		j += 2;
-		time_one_step(pow(10, i), (97 + i), j, norms, random_array);
+		time_one_step(pow(10, i), (97 + i), j, norms, random_array, sortMethod);
 		j += 2;
-		time_one_step(pow(10, i), (97 + i), j, norms, inverted_array);
+		time_one_step(pow(10, i), (97 + i), j, norms, inverted_array, sortMethod);
 		j = 0;
-		time_one_step(pow(10, i)*2, (97 + i+1), j, norms, random_light_array);
+		time_one_step(pow(10, i)*2, (97 + i+1), j, norms, random_light_array, sortMethod);
 		j += 2;
-		time_one_step(pow(10, i)*2, (97 + i+1), j, norms, random_array);
+		time_one_step(pow(10, i)*2, (97 + i+1), j, norms, random_array, sortMethod);
 		j += 2;
-		time_one_step(pow(10, i)*2, (97 + i+1), j, norms, inverted_array);
+		time_one_step(pow(10, i)*2, (97 + i+1), j, norms, inverted_array, sortMethod);
 	}
 
 	std::cout <<" Almost -- Random -- Opposite" << std::endl;
 	std::cout << " INF, 1 -- INF, 1 -- INF, 1  " << std::endl;
 
 
-	for (int i = 0; i < 102; i++) {
-		std::cout << i << ": ";
+	for (int i = 0; i < 104; i++) {
+		std::cout << i+1 << ": ";
 		for (int j = 0; j < 6; j++) {
 			std::cout << norms[i][j] << ", ";
 		}

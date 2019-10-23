@@ -16,6 +16,6 @@ std::vector <int> random_light_array(int size);
 
 std::vector <int> inverted_array(int size);
 
-void time_one_step(int size, int i, int j, double(&norms)[104][6], std::vector <int>(*func)(int));
+void time_one_step(int size, int i, int j, double(&norms)[104][6], std::vector <int>(*func)(int), void (*sortMethod)(std::vector <int>&));
 
-void performanceTest();
+void performanceTest(void (*sortMethod)(std::vector <int>&));

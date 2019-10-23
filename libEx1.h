@@ -11,5 +11,6 @@ std::vector <int> bubbleSort(std::vector <int> toSort, bool flag = 0, std::vecto
 void bubbleSort(std::vector <int>& toSort, std::vector <int>& order);
 
 void bubbleSort(std::vector <int>& toSort);
+void mergeSort(std::vector <int>& toSort);
 
 
