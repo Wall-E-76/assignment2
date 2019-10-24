@@ -1,6 +1,10 @@
 #include <iomanip>
 #include "test_performance.h"
-#define PERCENT 5
+#define PERCENT 5 //percent of mixing based on size, for our lightly sorted array
+#define USERANGE 0 //flag variable to indicate whether or not we are using a defined RANGE, 0 is OFF
+#define RANGE 1  //number of ints possible (from 0 to RANGE-1)
+#define RANGEOFFSET 0 // to shift the contiguous range
+#define SUBSIZE 1 //for sorted_subs(), the size of the pre-sorted subranges 
 
 
 double norm_one(double array[], int size) {
@@ -20,20 +24,70 @@ double norm_infinite(double array[], int size) {
     return norm;
 }
 
-std::vector <int> random_array(int size){
+std::vector <int> index_array(int size) {  //NEW, creates a sorted array of either values 0 to size or 0 to RANGE-1,,,, both of length size
+	std::vector <int> ans;
+	if (USERANGE == 0) {
+		for (int i = 0; i < size; i++) {
+			ans.push_back(i);
+		}
+	}
+	else if (USERANGE == 1) {
+		int num = size / RANGE; //length of subrange of same values
+		if (size % RANGE > 0 ) num++; //we want the ceiling, a rounding up division, because we want to have a possibly smaller subrange last rather than going over our RANGE limit 
+		int counter = 0; //will count each loop and reset once we've reached our desired repitions of the same number
+		int val = 0; //the actual value we will put in the array, from 0 to RANGE-1
+		
+		for (int i = 0; i < size; i++) {
+			if (counter == num) {
+				val++;
+				counter = 0;
+			}
+			ans.push_back(val);
+			counter++;
+		}
+	}
+	return ans;
+}
+
+std::vector <int> random_array(int size){ //MODIFIED contents
     std::vector <int> ans;
-    for (int i=0; i<size; i++){
-        ans.push_back(rand()%size -size/2);
-    }
+	if (USERANGE == 0) {
+		for (int i = 0; i < size; i++) {
+			ans.push_back(rand() % size - size / 2);
+		}
+	}
+	else if (USERANGE == 1) {
+		for (int i = 0; i < size; i++) {
+			ans.push_back((rand() % RANGE )+RANGEOFFSET);
+		}
+	}
     return ans;
 }
 
+std::vector <int> sorted_subs(int size) {  //NEW, creates array with unique pre-sorted sub arrays (each of length SUBSIZE)
+	std::vector <int> ans;
+	std::vector <int> order = index_array(size);
+	int num = size / SUBSIZE;
+	int extra = size % SUBSIZE;
 
-std::vector <int> random_light_array(int size){
-    std::vector <int> ans;
-    for (int i=1; i<=size; i++){
-        ans.push_back(i);
-    }
+	for (int i = 0; i < num; i++) {
+		int max; int min = 0;
+		for (int j = SUBSIZE; j >0; j--) {
+			max= order.size() - j+1 -min; //number of values that can be selected 
+			int rando = (rand() % (max))+min; //new random index above the minimum
+			ans.push_back(order[rando]); 
+			order.erase(order.begin()+rando); //remove this index so it can not be selected again
+			min = rando; //new minimum set at this index so next value in the array is above it
+		}
+	}
+	for (int i = 0; i < extra; i++) {
+		ans.push_back(order[i]); //remaining values filled in order (this sub array is tagged on at the end and is less than SUBSIZE)
+	}
+	return ans;
+}
+
+std::vector <int> random_light_array(int size){ //MODIFIED contents
+    std::vector <int> ans = index_array(size);
 
     for (int i=0; i<ceil((PERCENT/100.)*size);i++){
         int a= rand()%size;
@@ -49,9 +103,9 @@ std::vector <int> random_light_array(int size){
     return ans;
 }
 
-std::vector <int> inverted_array(int size){
+std::vector <int> inverted_array(int size){ //posibbly make this part of the index_Array(), then set global BOOL var?
     std::vector <int> ans;
-    for (int i=size; i>0; i--){
+    for (int i=size-1; i>=0; i--){
         ans.push_back(i);
     }
     return ans;

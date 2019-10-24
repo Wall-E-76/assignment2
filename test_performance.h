@@ -10,7 +10,11 @@ double norm_one(double array[], int size);
 
 double norm_infinite(double array[], int size);
 
+std::vector <int> index_array(int size);
+
 std::vector <int> random_array(int size);
+
+std::vector <int> sorted_subs(int size)
 
 std::vector <int> random_light_array(int size);
 
