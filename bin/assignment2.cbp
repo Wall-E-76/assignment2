@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6"/>
+	<Project>
+		<Option title="assignment2"/>
+		<Option makefile_is_custom="1"/>
+		<Option compiler="gcc"/>
+		<Option virtualFolders="CMake Files\;CMake Files\src\;CMake Files\unity\;CMake Files\test\;"/>
+		<Build>
+			<Target title="all">
+				<Option working_dir="/home/wall-e/CLionProjects/assignment2/bin"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="rebuild_cache">
+				<Option working_dir="/home/wall-e/CLionProjects/assignment2/bin"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="test">
+				<Option working_dir="/home/wall-e/CLionProjects/assignment2/bin"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 test"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Continuous">
+				<Option working_dir="/home/wall-e/CLionProjects/assignment2/bin"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 Continuous"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Experimental">
+				<Option working_dir="/home/wall-e/CLionProjects/assignment2/bin"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 Experimental"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="edit_cache">
+				<Option working_dir="/home/wall-e/CLionProjects/assignment2/bin"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="Nightly">
+				<Option working_dir="/home/wall-e/CLionProjects/assignment2/bin"/>
+				<Option type="4"/>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 Nightly"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="assignement2">
+				<Option output="/home/wall-e/CLionProjects/assignment2/bin/bin/assignement2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wall-e/CLionProjects/assignment2/bin/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wall-e/CLionProjects/assignment2/src/."/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/src/Makefile&quot;  VERBOSE=1 assignement2"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="assignement2/fast">
+				<Option output="/home/wall-e/CLionProjects/assignment2/bin/bin/assignement2" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wall-e/CLionProjects/assignment2/bin/bin"/>
+				<Option object_output="./"/>
+				<Option type="1"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wall-e/CLionProjects/assignment2/src/."/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/src/Makefile&quot;  VERBOSE=1 assignement2/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/src/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/src/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/src/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="unity">
+				<Option output="/home/wall-e/CLionProjects/assignment2/bin/unity/libunity.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wall-e/CLionProjects/assignment2/bin/unity"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wall-e/CLionProjects/assignment2/unity/src"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/unity/Makefile&quot;  VERBOSE=1 unity"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/unity/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/unity/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/unity/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+			<Target title="unity/fast">
+				<Option output="/home/wall-e/CLionProjects/assignment2/bin/unity/libunity.a" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/wall-e/CLionProjects/assignment2/bin/unity"/>
+				<Option object_output="./"/>
+				<Option type="2"/>
+				<Option compiler="gcc"/>
+				<Compiler>
+					<Add directory="/home/wall-e/CLionProjects/assignment2/unity/src"/>
+					<Add directory="/usr/include/c++/7"/>
+					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
+					<Add directory="/usr/include/c++/7/backward"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include"/>
+					<Add directory="/usr/local/include"/>
+					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/7/include-fixed"/>
+					<Add directory="/usr/include/x86_64-linux-gnu"/>
+					<Add directory="/usr/include"/>
+				</Compiler>
+				<MakeCommands>
+					<Build command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/unity/Makefile&quot;  VERBOSE=1 unity/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/unity/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/unity/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/home/wall-e/CLionProjects/assignment2/bin/unity/Makefile&quot;  VERBOSE=1 clean"/>
+				</MakeCommands>
+			</Target>
+		</Build>
+		<Unit filename="/home/wall-e/CLionProjects/assignment2/src/bubbleSort.cpp">
+			<Option target="assignement2"/>
+		</Unit>
+		<Unit filename="/home/wall-e/CLionProjects/assignment2/src/bubbleSort.h">
+			<Option target="assignement2"/>
+		</Unit>
+		<Unit filename="/home/wall-e/CLionProjects/assignment2/src/insertionSort.cpp">
+			<Option target="assignement2"/>
+		</Unit>
+		<Unit filename="/home/wall-e/CLionProjects/assignment2/src/insertionSort.h">
+			<Option target="assignement2"/>
+		</Unit>
+		<Unit filename="/home/wall-e/CLionProjects/assignment2/src/main.cpp">
+			<Option target="assignement2"/>
+		</Unit>
+		<Unit filename="/home/wall-e/CLionProjects/assignment2/src/mergeSort.cpp">
+			<Option target="assignement2"/>
+		</Unit>
+		<Unit filename="/home/wall-e/CLionProjects/assignment2/src/mergeSort.h">
+			<Option target="assignement2"/>
+		</Unit>
+		<Unit filename="/home/wall-e/CLionProjects/assignment2/src/test_performance.cpp">
+			<Option target="assignement2"/>
+		</Unit>
+		<Unit filename="/home/wall-e/CLionProjects/assignment2/src/test_performance.h">
+			<Option target="assignement2"/>
+		</Unit>
+		<Unit filename="/home/wall-e/CLionProjects/assignment2/unity/Unity/src/unity.c">
+			<Option target="unity"/>
+		</Unit>
+		<Unit filename="/home/wall-e/CLionProjects/assignment2/unity/Unity/src/unity.h">
+			<Option target="unity"/>
+		</Unit>
+		<Unit filename="/home/wall-e/CLionProjects/assignment2/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\"/>
+		</Unit>
+		<Unit filename="/home/wall-e/CLionProjects/assignment2/src/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\src\"/>
+		</Unit>
+		<Unit filename="/home/wall-e/CLionProjects/assignment2/unity/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\unity\"/>
+		</Unit>
+		<Unit filename="/home/wall-e/CLionProjects/assignment2/test/CMakeLists.txt">
+			<Option virtualFolder="CMake Files\test\"/>
+		</Unit>
+	</Project>
+</CodeBlocks_project_file>

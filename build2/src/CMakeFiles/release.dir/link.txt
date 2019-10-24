@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/release.dir/bubbleSort.cpp.o CMakeFiles/release.dir/main.cpp.o CMakeFiles/release.dir/test_performance.cpp.o CMakeFiles/release.dir/mergeSort.cpp.o CMakeFiles/release.dir/insertionSort.cpp.o  -o build/bin/release 

@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/test_app.dir/test.cpp.o  -o build/bin/test_app ../unity/src/libunity.a 
