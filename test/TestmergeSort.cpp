@@ -1,7 +1,7 @@
 //
 // Created by wall-e on 24/10/2019.
 //
-#include "../src/bubbleSort.h"
+#include "../src/mergeSort.h"
 #include "/home/wall-e/CLionProjects/assignment2/unity/src/unity.h"
 
 void setUp(void){
@@ -10,7 +10,7 @@ void setUp(void){
 void tearDown(void){
 }
 
-void test_bubbleSort(void){
+void test_mergeSort(void){
     int size = 100;
     std::vector <int> actual;
     std::vector <int> original;
@@ -21,7 +21,7 @@ void test_bubbleSort(void){
         actual.push_back(elt);
     }
     int expectedSize = actual.size();
-    bubbleSort(actual);
+    mergeSort(actual);
     TEST_ASSERT_EQUAL_INT(expectedSize, actual.size());
     for (int i = 0; i < size-1; i++){
         TEST_ASSERT_GREATER_THAN(actual[i], actual[i+1]+1);
@@ -46,7 +46,7 @@ void test_bubbleSort(void){
     TEST_ASSERT_EQUAL_INT(0, actual.size());
 }
 
-void test_bubbleSortWithOrder(void){
+void test_mergeSortWithOrder(void){
     int size = 100;
     std::vector <int> actual;
     std::vector <int> original;
@@ -58,7 +58,7 @@ void test_bubbleSortWithOrder(void){
         actual.push_back(elt);
     }
     int expectedSize = actual.size();
-    bubbleSort(actual, order);
+    mergeSort(actual, order);
     TEST_ASSERT_EQUAL_INT(expectedSize, actual.size());
     for (int i = 0; i < size-1; i++){
         TEST_ASSERT_GREATER_THAN(actual[i], actual[i+1]+1);
@@ -90,7 +90,7 @@ void test_bubbleSortWithOrder(void){
 
 int main(void){
     UNITY_BEGIN();
-    RUN_TEST(test_bubbleSort);
-    RUN_TEST(test_bubbleSortWithOrder);
+    RUN_TEST(test_mergeSort);
+    RUN_TEST(test_mergeSortWithOrder);
     return UNITY_END();
 }

@@ -1,4 +1,3 @@
-#include "insertionSort.h"
 #include "bubbleSort.h"
 #include "mergeSort.h"
 #include "test_performance.h"
@@ -21,7 +20,6 @@ int main() {
         }*/
 
     try {
-        performanceTest(insertionSort);
         performanceTest(bubbleSort);
         performanceTest(mergeSort);
     }

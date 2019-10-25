@@ -11,7 +11,7 @@ void bubbleSort(std::vector <int>& toSort) {
     }
     do {
         ch = false;
-        for (int i = 1; i < size - 1; i++) {
+        for (int i = 1; i < size; i++) {
             if (toSort[i - 1] > toSort[i]) {
                 temp = toSort[i - 1];
                 toSort[i - 1] = toSort[i];
@@ -43,7 +43,7 @@ void bubbleSort(std::vector <int>& toSort, std::vector <int>& order) {
 
 	do {
 		ch = 0;
-		for (int i = 1; i < size - 1; i++) {
+		for (int i = 1; i < size; i++) {
 			if (toSort[i - 1] > toSort[i]) {
 				temp = toSort[i - 1];
 				toSort[i - 1] = toSort[i];
